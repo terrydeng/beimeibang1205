@@ -1,0 +1,39 @@
+<div class="footer-bar ">
+
+    <div class="container">
+        <div class="row" style="height: 277px;">
+            <div class="col-xs-12 friend-link">
+                {:Hook('friendLink')}
+            </div>
+
+            <div class="col-xs-6 introduce">
+                <h1 style="color: #fff;">关于我们</h1>
+                <div style="color: white;text-align: left;text-indent: 2em"> {:modC('ABOUT_US','暂未设置','Config')}</div>
+                <a href="http://www.ourstu.com/" target="_blank"> <p class="view">View More Details</p></a>
+            </div>
+
+            <div class="col-xs-6" style="height: 160px;text-align: center">
+                <h1 style="color: #fff;">关注我们</h1>
+                <div style="color: white"> {:modC('SUBSCRIB_US','暂未设置','Config')}</div>
+            </div>
+
+            <div class="col-xs-12 shouquan">
+                <div style="color: white;margin-top: 5px;">{:modC('COPY_RIGHT','暂未设置','Config')}</div>
+               <div style="color: #fff"> Powered by <a style="color: #fff;" target="_blank" href="http://www.opensns.cn">OpenSNS</a>
+                备案号：<a href="http://www.miitbeian.gov.cn/" target="_blank" style="color: #fff;">
+                {:modC('ICP','暂未设置','Config')} </a></div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/js"/>
+
+<block name="script"><!-- 用于加载js代码 --></block>
+
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+{:hook('pageFooter', 'widget')}
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+    <block name="hidden"></block>
+</div>

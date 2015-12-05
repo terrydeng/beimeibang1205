@@ -1,0 +1,345 @@
+<extend name="Base/common"/>
+
+<block name="header">
+	<include file="Public/nav"/>
+</block>
+
+
+<block name="style">
+    <link href="__CSS__/school_details.css" rel="stylesheet" type="text/css"/>
+</block>
+
+
+	
+<block name="body">
+    <div class="main-content">
+		<div class="school-header">
+			<div class="container">				
+				<div class="row school-intro">
+					<div class="col-md-2">
+						<if condition="($schoolinfo[0].logo_name eq '') ">   
+							<else /> <a href="{:U('detail?id='.$vo['id'])}"> <img class='school-emblem' src='__IMG__/schools/{$schoolinfo[0].logo_name}.png'> </a>
+						</if>
+					</div>
+					<div class="col-md-6">
+						<div class="row school-details">
+							<h2 class="school-name">{$schoolinfo[0].eng_name}</h2>
+						</div>
+						<div class="row school-details">
+							<if condition="($schoolinfo[0].city eq '') ">
+								<else /> <div class="school-closest-city">城市: {$schoolinfo[0].city}</div>
+							</if>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<if condition="($schoolinfo[0].national_rank eq '') ">
+							<else /> 
+							<div class="school-country-rank-container">		
+								<div class="rank-number">{$schoolinfo[0].national_rank}</div>
+								<div class="rank-bubble">本国排名</div>
+							</div>
+						</if>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container school-post">
+			<div class="row">
+				<div class="col-md-8">
+					<ul id="school-detail-tabs" class="nav nav-tabs" data-tabs="tabs">
+						<li class="active"><a href="#school-information-section" data-toggle="tab">School Information</a></li>
+						<li><a href="#application-section" data-toggle="tab">Application Information</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" role="tabpanel" id="school-information-section">
+						
+							<div class="col-md-12">
+								<h2>学校介绍</h2>
+							</div>
+							
+							<if condition="($schoolinfo[0].school_intro eq '') ">
+								<else />
+								<div class="row post-content">
+									<div class="col-md-12">
+										{$schoolinfo[0].school_intro}
+									</div>
+								</div>
+							</if>
+							<div class="school-information-section">
+								<div class="col-md-12">
+									<table>
+										<tr>
+											<td class="item-label-cell">学校类型</td>
+											<td>
+												<if condition="($school_type[0].school_type eq '') ">
+													<else /> {$schoolinfo[0].school_type}
+												</if>
+											</td>								
+										</tr>
+										<tr>
+											<td class="item-label-cell">教师数量</td>
+											<td>
+												<if condition="($school_type[0].teacher_count eq '') ">
+													<else /> {$schoolinfo[0].teacher_count}
+												</if>
+											</td>
+										</tr>
+										<tr>
+											<td class="item-label-cell">职工数量</td>
+											<td>
+												<if condition="($school_type[0].employee_count eq '') ">
+													<else /> {$schoolinfo[0].employee_count}
+												</if>
+											</td>
+										</tr>
+										<tr>
+											<td class="item-label-cell">学生数量</td>
+											<td>
+												<if condition="($school_type[0].student_count eq '') ">
+													<else /> {$schoolinfo[0].student_count}
+												</if>
+											</td>
+										</tr>		
+										<tr>
+											<td class="item-label-cell">国际留学生数量</td>
+											<td>
+												<if condition="($school_type[0].intn_std_count eq '') ">
+													<else /> {$schoolinfo[0].intn_std_count}
+												</if>
+											</td>								
+										</tr>										
+									</table>
+								</div>
+							</div>
+							<div class="school-information-section">
+								<div class="col-md-12">
+									<h2>核心课程</h2>
+								</div>
+								<div class="col-md-12">
+									<table>
+										<tr>
+											<td class="item-label-cell">核心课程</td>
+											<td>
+												<if condition="($school_type[0].core_courses eq '') ">
+													<else /> {$schoolinfo[0].core_courses}
+												</if>
+											</td>
+										</tr>
+										<tr>
+											<td class="item-label-cell">课程特色</td>
+											<td>
+												<if condition="($school_type[0].course_specialty eq '') ">
+													<else /> {$schoolinfo[0].course_specialty}
+												</if>
+											</td>
+										</tr>
+										<tr>
+											<td class="item-label-cell">特色项目</td>
+											<td>
+												<if condition="($school_type[0].featured_proj eq '') ">
+													<else /> {$schoolinfo[0].featured_proj}
+												</if>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="school-information-section">
+								<div class="col-md-12">
+									<h2>学校设施</h2>
+								</div>
+								<div class="col-md-12">
+									<table>
+										<tr>
+											<td class="item-label-cell">图书馆</td>
+											<td>
+												<if condition="($school_type[0].libarary eq '') ">
+													<else /> {$schoolinfo[0].libarary}
+												</if>
+											</td>
+										</tr>
+										<tr>
+											<td class="item-label-cell">其他</td>
+											<td>
+												<if condition="($school_type[0].other_facilities eq '') ">
+													<else /> {$schoolinfo[0].other_facilities}
+												</if>
+											</td>
+										</tr>							
+									</table>
+								</div>
+							</div>
+							<div class="school-information-section">
+								<div class="col-md-12">
+									<h2>生活信息</h2>
+								</div>
+								<div class="col-md-12">
+									<table>
+										<tr>
+											<td class="item-label-cell">吃</td>
+											<td>
+												<if condition="($school_type[0].eateries eq '') ">
+													<else /> {$schoolinfo[0].eateries}
+												</if>
+											</td>								
+										</tr>
+										<tr>
+											<td class="item-label-cell">住</td>
+											<td>
+												<if condition="($school_type[0].residency eq '') ">
+													<else /> {$schoolinfo[0].residency}
+												</if>
+											</td>
+										</tr>
+										<tr>
+											<td class="item-label-cell">行</td>
+											<td>
+												<if condition="($school_type[0].transportation eq '') ">
+													<else /> {$schoolinfo[0].transportation}
+												</if>
+											</td>
+										</tr>						
+									</table>
+								</div>
+							</div>
+							<div class="school-information-section">
+								<div class="col-md-12">
+									<h2>留学费用</h2>
+								</div>
+								<div class="col-md-12">
+									<table>
+										<tr>
+											<td class="item-label-cell">平均留学学费</td>
+											<td>
+												<if condition="($school_type[0].avg_tuition eq '') ">
+													<else /> {$schoolinfo[0].avg_tuition}
+												</if>
+											</td>								
+										</tr>
+										<tr>
+											<td class="item-label-cell">平均留学申请费</td>
+											<td>
+												<if condition="($school_type[0].avg_apply_fee eq '') ">
+													<else /> {$schoolinfo[0].avg_apply_fee}
+												</if>
+											</td>
+										</tr>
+										<tr>
+											<td class="item-label-cell">平均住宿费</td>
+											<td>
+												<if condition="($school_type[0].avg_rent eq '') ">
+													<else /> {$schoolinfo[0].avg_rent}
+												</if>
+											</td>
+										</tr>						
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" role="tabpanel" id="application-section">
+							<div class="post-content">
+								<div class="row school-information-section">
+									<div class="col-md-12">
+										<h2>申请信息</h2>
+									</div>
+									<div class="col-md-12">
+										<table>
+											<tr>
+												<td class="item-label-cell">招生联系方式</td>
+												<td>
+													<if condition="($school_type[0].contact_method eq '') ">
+														<else /> {$schoolinfo[0].contact_method}
+													</if>
+												</td>								
+											</tr>
+											<tr>
+												<td class="item-label-cell">申请条件(入学时间)</td>
+												<td>
+													<if condition="($school_type[0].app_entry_date eq '') ">
+														<else /> {$schoolinfo[0].app_entry_date}
+													</if>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-label-cell">申请条件(申请截止时间)</td>
+												<td>
+													<if condition="($school_type[0].app_deadline eq '') ">
+														<else /> {$schoolinfo[0].app_deadline}
+													</if>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-label-cell">申请条件(成绩要求)</td>
+												<td>
+													<if condition="($school_type[0].app_mark_req eq '') ">
+														<else /> {$schoolinfo[0].app_mark_req}
+													</if>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-label-cell">申请条件(语言要求)</td>
+												<td>
+													<if condition="($school_type[0].app_lang_req eq '') ">
+														<else /> {$schoolinfo[0].app_lang_req}
+													</if>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-label-cell">大学升学率</td>
+												<td>
+													<if condition="($school_type[0].uni_enroll_rate eq '') ">
+														<else /> {$schoolinfo[0].uni_enroll_rate}
+													</if>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-label-cell">毕业学生进入主要高校</td>
+												<td>
+													<if condition="($school_type[0].main_grad_sch eq '') ">
+														<else /> {$schoolinfo[0].main_grad_sch}
+													</if>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-md-4">
+					
+					<div class="row">
+						<div class="col-md-10 col-md-offset-2 social-section">
+							<h2>热门顾问排序</h2>
+							<li></li>
+						</div>
+						<div class="col-md-10 col-md-offset-2 social-section">
+							<h2>关注<?php echo $chinese_school_name; ?>的人还关注了</h2>
+							<li></li>
+						</div>
+						<div class="col-md-10 col-md-offset-2 social-section">
+							<h2>其他的人</h2>
+							<li></li>
+						</div>
+					</div>
+					
+						
+					<!-- Apply Widget-->
+					<?php//the_widget( 'huma_application_widget');?>
+					
+				</div>
+			</div>
+		</div>
+
+		<!--
+			<div>
+				{$schoolid}
+				{$schoolinfo[0].eng_name}
+				<?php var_dump($schoolinfo) ?>	
+			</div>		
+		-->
+    </div>
+</block>

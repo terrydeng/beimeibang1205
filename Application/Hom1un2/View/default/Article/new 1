@@ -1,0 +1,48 @@
+
+update o1t1_doc0s1 set uid=3,
+id0a0=id,
+uid=2,
+name=id,
+title="new",
+group=0,
+description="description1new",
+root=0,
+pid=0,
+model_id=2,
+type=2,
+position=0,
+link_id=0,
+cover_id=0,
+where id>4;
+
+
+
+id0a0=id,
+uid=2,
+name=id,
+
+description="description1new",
+root=0,
+pid=0,
+model_id=2,
+type=2,
+position=0,
+link_id=0,
+cover_id=0
+
+
+update o1t1_doc0s1 set uid=3,
+id0a0=id,
+uid=2,
+name=id,
+title="new",
+group_id=0,
+description="description1new",
+root=0,
+pid=0,
+model_id=2,
+type=2,
+position=0,
+link_id=0,
+cover_id=0
+where id>4;

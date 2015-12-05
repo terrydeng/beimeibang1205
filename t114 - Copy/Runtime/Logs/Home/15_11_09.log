@@ -1,0 +1,696 @@
+[ 2015-11-09T08:50:54+08:00 ] 52.33.42.32 /t114/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+SQL: SHOW COLUMNS FROM `o1t1_hooks` [ RunTime:0.0072s ]
+SQL: SELECT `name`,`addons` FROM `o1t1_hooks`  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `o1t1_addons` [ RunTime:0.0165s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('ReturnTop')  [ RunTime:0.2440s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0035s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('Attachment','SocialComment')  [ RunTime:0.0112s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0174s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('EditorForAdmin')  [ RunTime:0.0133s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('SiteStat','SystemInfo','DevTeam')  [ RunTime:0.0360s ]
+SQL: SELECT `id`,`name` FROM `o1t1_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0215s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.624852s ]
+INFO: [ app_init ] --END-- [ RunTime:0.625384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0027s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0119s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1447030245 AND ( deadline = 0 OR deadline > 1447030245 ) ORDER BY `id` DESC  [ RunTime:0.0866s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0134s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0136s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.049612s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000523s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','10','20','30','40') AND `create_time` < 1447030245 AND ( deadline = 0 OR deadline > 1447030245 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[42000] [1049] Unknown database 'o113'
+
+[ 2015-11-09T08:52:49+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/default_blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002145s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0025s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0115s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030368 AND ( deadline = 0 OR deadline > 1447030368 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0049s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.030316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[42000] [1049] Unknown database 'o113'
+
+[ 2015-11-09T08:52:53+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/moren0fenlei2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0173s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'moren0fenlei2' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0147s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447030373 AND ( deadline = 0 OR deadline > 1447030373 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0123s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015116s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000458s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[42000] [1049] Unknown database 'o113'
+
+[ 2015-11-09T08:52:55+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/name_xiaoxue.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016779s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0023s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0108s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'name_xiaoxue' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0039s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 30 AND `create_time` < 1447030375 AND ( deadline = 0 OR deadline > 1447030375 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0116s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026926s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 30 AND `create_time` < 1447030375 AND ( deadline = 0 OR deadline > 1447030375 ) LIMIT 1   [ RunTime:0.0021s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2015-11-09T08:52:58+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/moren0fenlei2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010418s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002221s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0037s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0048s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'moren0fenlei2' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447030378 AND ( deadline = 0 OR deadline > 1447030378 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0107s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019655s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[42000] [1049] Unknown database 'o113'
+
+[ 2015-11-09T08:53:00+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/default_blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0106s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030380 AND ( deadline = 0 OR deadline > 1447030380 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0098s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000412s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+ERR: SQLSTATE[42000] [1049] Unknown database 'o113'
+
+[ 2015-11-09T08:54:43+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/default_blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004089s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013785s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0021s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0146s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030482 AND ( deadline = 0 OR deadline > 1447030482 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0121s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0012s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.029720s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000685s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030482 AND ( deadline = 0 OR deadline > 1447030482 ) LIMIT 1   [ RunTime:0.0015s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.176327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.162811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013323s ]
+
+[ 2015-11-09T08:54:45+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/moren0fenlei2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002628s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0024s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0292s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'moren0fenlei2' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0316s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447030485 AND ( deadline = 0 OR deadline > 1447030485 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0136s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0178s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0023s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.037271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447030485 AND ( deadline = 0 OR deadline > 1447030485 ) LIMIT 1   [ RunTime:0.0015s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.046387s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000911s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2015-11-09T08:54:48+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/default_blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002744s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0106s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030487 AND ( deadline = 0 OR deadline > 1447030487 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023911s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030487 AND ( deadline = 0 OR deadline > 1447030487 ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.082870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010844s ]
+
+[ 2015-11-09T08:55:24+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/moren0fenlei2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011768s ]
+INFO: [ app_init ] --END-- [ RunTime:0.027802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0028s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0035s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'moren0fenlei2' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447030524 AND ( deadline = 0 OR deadline > 1447030524 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0086s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000657s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447030524 AND ( deadline = 0 OR deadline > 1447030524 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.028659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000915s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2015-11-09T08:55:26+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/default_blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002597s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0021s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0136s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0322s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030526 AND ( deadline = 0 OR deadline > 1447030526 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0124s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0212s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0116s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.041751s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447030526 AND ( deadline = 0 OR deadline > 1447030526 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.199431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.179838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.045196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.045333s ]
+
+[ 2015-11-09T09:09:07+08:00 ] 70.79.173.113 /t114/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007148s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0048s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0128s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1447031347 AND ( deadline = 0 OR deadline > 1447031347 ) ORDER BY `id` DESC  [ RunTime:0.0079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021691s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001399s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','10','20','30','40') AND `create_time` < 1447031347 AND ( deadline = 0 OR deadline > 1447031347 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `o1t1_cat0s1` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0086s ]
+SQL: SELECT * FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.075724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001578s ]
+
+[ 2015-11-09T09:09:11+08:00 ] 70.79.173.113 /t114/index.php?s=/Home/Article/lists/category/default_blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002106s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0019s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0109s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447031351 AND ( deadline = 0 OR deadline > 1447031351 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022239s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447031351 AND ( deadline = 0 OR deadline > 1447031351 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.060350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009204s ]
+
+[ 2015-11-09T09:09:13+08:00 ] 70.79.173.113 /t114/index.php?s=/Home/Article/lists/category/moren0fenlei2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014332s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0019s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'moren0fenlei2' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447031353 AND ( deadline = 0 OR deadline > 1447031353 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017492s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 20 AND `create_time` < 1447031353 AND ( deadline = 0 OR deadline > 1447031353 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.016544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2015-11-09T09:11:18+08:00 ] 52.33.42.32 /t114/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002940s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0145s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0128s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1447031478 AND ( deadline = 0 OR deadline > 1447031478 ) ORDER BY `id` DESC  [ RunTime:0.0121s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020455s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000794s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0086s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','10','20','30','40') AND `create_time` < 1447031478 AND ( deadline = 0 OR deadline > 1447031478 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.085430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001200s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013197s ]
+
+[ 2015-11-09T09:20:34+08:00 ] 52.33.42.32 /t114/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012692s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0124s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1447032034 AND ( deadline = 0 OR deadline > 1447032034 ) ORDER BY `id` DESC  [ RunTime:0.0144s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000599s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.028889s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000855s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','10','20','30','40') AND `create_time` < 1447032034 AND ( deadline = 0 OR deadline > 1447032034 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.086675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003210s ]
+
+[ 2015-11-09T09:20:37+08:00 ] 52.33.42.32 /t114/index.php?s=/Home/Article/lists/category/default_blog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.018650s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0021s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0127s ]
+SQL: SHOW COLUMNS FROM `o1t1_cat0s1` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `o1t1_cat0s1` WHERE `name` = 'default_blog' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_doc0s1` [ RunTime:0.0128s ]
+SQL: SELECT `id`,`id0a0`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`id_a0`,`F1`,`F2`,`F3`,`f4`,`F5`,`F6`,`F7`,`F8`,`F9`,`学校介绍`,`F11`,`F12`,`F13`,`F14`,`F15`,`F16`,`热门专业`,`学校设施`,`F19`,`生活信息`,`F21`,`F22`,`留学费用`,`F24`,`F25`,`F26`,`F27`,`F28`,`F29`,`F30`,`F31`,`F32` FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447032037 AND ( deadline = 0 OR deadline > 1447032037 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `o1t1_channel` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `o1t1_channel` WHERE ( status=1 ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `o1t1_cat0s1` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `o1t1_cat0s1` WHERE `pid` = 1 AND `status` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018569s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010103s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `o1t1_doc0s1` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 10 AND `create_time` < 1447032037 AND ( deadline = 0 OR deadline > 1447032037 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.069136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001771s ]
+

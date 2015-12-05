@@ -1,0 +1,250 @@
+<extend name="Base/common"/>
+
+<block name="style">
+    <link href="__CSS__/issue.css" rel="stylesheet" type="text/css"/>
+</block>
+<block name="header">
+    <include file="Public/_nav"/>
+</block>
+<block name="body">
+    <div style="position: relative">
+    <if condition="$display_type eq 'masonry'">
+        <div class="display_type">
+            <a href="{:U('Issue/Index/index',array('issue_id'=>$_GET['issue_id'],'display_type'=>'list'))}" title="列表展示"><i class="icon-th"></i></a>
+            <a class="current" title="瀑布流展示"><i class="icon-align-justify"></i></a>
+        </div>
+        <else/>
+        <div class="display_type">
+            <a class="current" title="列表展示"><i class="icon-th"></i></a>
+            <a href="{:U('Issue/Index/index',array('issue_id'=>$_GET['issue_id'],'display_type'=>'masonry'))}" title="瀑布流展示"><i class="icon-align-justify"></i></a>
+        </div>
+    </if>
+
+	<div class="container featured-school-info">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title">学校资源精选</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/1.jpg" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">夏令营/冬令营</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/2.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">插班生</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/3.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">小学</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/4.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">中学</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/5.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">大学</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/6.gif" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">特色院校</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="featured-icons">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title">全产业链服务平台</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/icon1.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">1对1辅导</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/icon2.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">文书服务</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/icon6.png" />					
+				</div>
+				<div class="row">
+					<div class="featured-school-description">落地安家</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/icon4.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">课外辅导 </div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/icon5.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">海外升学</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">  
+					<img class="featured-school-info-logo" src="__IMG__/icon3.png" />
+				</div>
+				<div class="row">
+					<div class="featured-school-description">就业服务</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+    <div class="issue_list">
+	<php> </php>
+        <volist name="contents" id="vo">
+            <div class="item_inner">
+                <div class="item_core">
+                    <div class="item_type">{$vo.issue.title}</div>
+                    <a href="{:U('Issue/Index/issueContentDetail',array('id'=>$vo['id']))}">
+                        <if condition="$display_type eq 'masonry'">
+                            <img class="cover" src="{$vo.cover_id|getThumbImageById=255}" height="{$vo.cover_height|default=253}"/>
+                            <else/>
+                            <img class="cover" src="{$vo.cover_id|getThumbImageById=255,200}" style="height:200px;"/>
+                        </if>
+                    </a>
+
+                    <div><h3><a href="{:U('Issue/Index/issueContentDetail',array('id'=>$vo['id']))}" class="text-more"
+                                style="width: 100%">{$vo.title}</a></h3></div>
+                    <div class="spliter"></div>
+                    <div>
+                        <ul class="operation clearfix">
+                            <li><i class="icon-eye-open"></i>{$vo.view_count}</li>
+                            <li>
+                                {:Hook('support',array('table'=>'issue_content','row'=>$vo['id'],'app'=>'Issue','uid'=>$vo['uid'],'jump'=>'issue/index/issuecontentdetail'))}
+                            </li>
+                            <li><i class="icon-comments-alt"></i>{$vo.reply_count}</li>
+                        </ul>
+                    </div>
+                    <div class="spliter"></div>
+                    <div><a class="author" href="{$vo.user.space_url}">
+                        <img src="{$vo.user.avatar128}"
+                             ucard="{$vo.uid}" class="avatar-img">{$vo.user.nickname}
+                    </a>
+
+                        <div class="pull-right ctime">{$vo.create_time|friendlyDate}</div>
+                    </div>
+                </div>
+            </div>
+    </volist>
+	<php></php>
+    </div>
+	
+	<!-- -->
+	    <div class="issue_list">
+        <volist name="contents" id="vo">
+            <div class="item_inner">
+                <div class="item_core">
+                    <div class="item_type">{$vo.issue.title}</div>
+                    <a href="{:U('Issue/Index/issueContentDetail',array('id'=>$vo['id']))}">
+                        <if condition="$display_type eq 'masonry'">
+                            <img class="cover" src="{$vo.cover_id|getThumbImageById=255}" height="{$vo.cover_height|default=253}"/>
+                            <else/>
+                            <img class="cover" src="{$vo.cover_id|getThumbImageById=255,200}" style="height:200px;"/>
+                        </if>
+                    </a>
+
+                    <div><h3><a href="{:U('Issue/Index/issueContentDetail',array('id'=>$vo['id']))}" class="text-more"
+                                style="width: 100%">{$vo.title}</a></h3></div>
+                    <div class="spliter"></div>
+                    <div>
+                        <ul class="operation clearfix">
+                            <li><i class="icon-eye-open"></i>{$vo.view_count}</li>
+                            <li>
+                                {:Hook('support',array('table'=>'issue_content','row'=>$vo['id'],'app'=>'Issue','uid'=>$vo['uid'],'jump'=>'issue/index/issuecontentdetail'))}
+                            </li>
+                            <li><i class="icon-comments-alt"></i>{$vo.reply_count}</li>
+                        </ul>
+                    </div>
+                    <div class="spliter"></div>
+                    <div><a class="author" href="{$vo.user.space_url}">
+                        <img src="{$vo.user.avatar128}"
+                             ucard="{$vo.uid}" class="avatar-img">{$vo.user.nickname}
+                    </a>
+
+                        <div class="pull-right ctime">{$vo.create_time|friendlyDate}</div>
+                    </div>
+                </div>
+            </div>
+    </volist>
+    </div>
+	
+	
+	
+	
+        <if condition="count($contents) eq 0">
+            <div style="font-size:3em;padding:2em 0;color: #ccc;text-align: center">此分类下暂无内容哦。O(∩_∩)O~</div>
+        </if>
+    <div>
+        <div class="pull-right">
+
+            {:getPagination($totalPageCount,16)}
+        </div>
+    </div>
+
+    <include file="_box"/>
+    </div>
+</block>
+<block name="script">
+    <if condition="$display_type eq 'masonry'">
+        <script src="__JS__/masonry/jquery.masonry.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.issue_list').masonry({
+                    itemSelector: '.item_inner',
+                    gutterWidth: 20,
+                    columnWidth: 255,
+                    isFitWidth: true
+                });
+            });
+        </script>
+    </if>
+</block>
+

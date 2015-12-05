@@ -1,0 +1,7 @@
+.nav_bar .nav .open > a,
+.nav_bar .nav .open > a:hover,
+.nav_bar .nav .open > a:focus,
+.nav_bar .nav > li > a:hover,
+.nav_bar .nav > li > a:focus {
+  background: #4dabff;
+}

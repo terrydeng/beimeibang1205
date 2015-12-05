@@ -1,0 +1,326 @@
+img.slider-image{
+	width: 100%;
+}
+
+.sliderSection{
+	min-height: 400px;
+	position: relative;
+}
+
+.bx-viewport{
+	min-width: 1450px;
+}
+
+@media screen and (max-width: 992px) {
+	.application-tag-line {
+		display: none;
+	}
+}
+
+.application-section{
+	position : absolute;
+    width:100%;
+    z-index:200;
+	top: 50px;
+	right: 0;
+	left: 0;
+	color: white;
+}
+
+
+.application-form {
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	background: transparent;	
+    border-radius: 0px;
+	border: 1px solid white;
+	color: white;
+	padding: 20px;    
+    font-size:12px;
+    color:#212121;
+    z-index:9999;
+	width: 300px;
+}
+
+.application-form .title{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	margin-bottom: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.application-form .selection-label{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	color: white;
+	margin-bottom: 5px;
+}
+
+.application-form .option {
+	display: inline-block;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	font-weight: bold;
+	color: white;	
+	border-radius: 2px;
+    background-color: rgba(255,255,255,.1);
+    padding: 5px 20px;
+    border-left: 1px solid grey;
+    border-bottom: 2px solid grey;
+    border-right: 1px solid grey;
+	font-size: 15px;
+}
+
+.application-form .option.selected{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	color: #e48439;
+	font-weight: bold;
+}
+
+.application-form .option.second{
+	width: 88px;
+}
+
+.application-form .option.first,
+.application-form .option.second{
+	margin-right: 9px;
+}
+
+.application-form  .form-submit{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	font-size: 17px;
+	color: white;
+	margin-top: 15px;
+	background-color: #e48439;
+	padding: 10px;
+	text-align: center;	
+}
+
+.application-form .form-submit, .application-form .text-input{
+	width: 260px;
+}
+
+.application-form .selection-label{
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+.application-tag-line .jumbo-heading {
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	font-size: 45px;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.application-tag-line .sub-tag {
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	font-size: 25px;
+    margin-top: 20px;
+	letter-spacing: 3px;	
+}
+.bx-wrapper .bx-pager{
+	display: none;
+}
+
+.notes-icons-section{
+	padding: 20px;
+	background-color: #e48439;
+	text-align: center;
+	height: 250px;
+    overflow: hidden;
+}
+
+.notes-icon {
+	margin-top: 20px;
+}
+
+.notes-icon:hover .icon-heading,
+.notes-icon:hover .icon-sub-heading{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	color: #ffffff;
+}
+
+.notes-icons-section .icon-heading{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	color: #E6CCAE;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.notes-icons-section .icon-sub-heading{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	color: #E6CCAE;
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.common-block {
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	padding-top: 45px;
+	
+}
+.common-block .common-block-body {
+	
+}
+
+
+/*Home 学校资源精选*/
+.common-block .issue-title {
+	text-align: center;
+	color: #565A5C;
+	font-size: 32px;	
+	font-weight: bold;
+	line-height: 35.2px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	margin-bottom: 10px;
+}
+
+.common-block .issue-title  h2{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+}
+
+.common-block .issue-subtitle{
+	text-align: center;
+	color: #4f4f4f;
+	font-size: 16px;	
+}
+.common-block h3.issue-subtitle {
+	margin-top: 0px;
+	margin-bottom: 35px;
+}
+.block-bar.issue-homeblock {
+	background-color: white;
+}
+
+
+
+/*Home 海外学习攻略攻略*/
+.common-block .startegy-title{
+	text-align: center;
+	color: #565A5C;
+	padding-top: 25px;
+	font-size: 32px;	
+	font-weight: bold;
+	line-height: 35.2px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	margin-bottom: 10px;
+}
+
+.common-block .strategy-subtitle {	
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	color: #565A5C;
+	text-align: center;
+	font-size: 16px;	
+	margin-top: 0px;
+	margin-bottom: 25px;	
+}
+
+.block-bar {
+	background: white;
+}
+
+.block-bar.strategy{
+	background-color: #ededed;
+}
+
+.block-bar.strategy .common-block{
+	padding-top: 20px;
+	background-color: #ededed;
+}
+
+/*Home */
+.common-block .startegy-title{
+	text-align: center;
+	color: #565A5C;
+	padding-top: 25px;
+	font-size: 32px;	
+	font-weight: bold;
+	line-height: 35.2px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	margin-bottom: 10px;
+}
+
+/*Home */
+.common-block .section-title,
+.social.section-title{
+	text-align: center;
+	color: #565A5C;
+	padding-top: 0px;
+	font-size: 32px;	
+	font-weight: bold;
+	line-height: 35.2px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	margin-bottom: 10px;
+}
+
+.common-block .section-subtitle,
+.social.section-subtitle {
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+	color: #565A5C;
+	text-align: center;
+	font-size: 16px;	
+	margin-top: 0px;
+	margin-bottom: 40px;	
+}
+
+.common-block .section-title.members{
+	margin-bottom: 30px;
+}
+.common-block .section-title.light-blog,
+.common-block .section-title.members{
+	margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+
+.news_list .author{
+	color: #b2b2b2;
+}
+
+.news_list .text-more{
+	color: #828282;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.news_list .category{
+	color: #B7B5B5;
+}
+
+.common-block.weibo{
+	padding-top: 0px;
+}
+
+.common-block .question_list .one_question .best_answer .a_title{
+	margin: 0px 0 13px
+}
+
+.block-bar.weibo .right-border {
+	border-right: 1px solid #eeeeee;
+}
+
+.question_list img.avatar-img {
+    width: 20px !important;
+    margin-left: 50px;
+	margin-right: 5px;
+}
+
+.weibo_content_p img{
+	display: none;
+}
+
+.weibo_content_p .clearfix{
+	display: none;
+}
+
+.common-block.weibo .slimScrollDiv {
+	border-top: 1px solid #eeeeee;
+}
+
+.weibo_content_p .word-wrap{
+	height: 30px;
+    overflow: hidden;	
+}

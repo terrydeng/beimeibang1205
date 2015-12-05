@@ -1,0 +1,3 @@
+<?php
+//000000000000a:15:{s:2:"id";s:2:"14";s:4:"name";s:3:"Cat";s:5:"alias";s:12:"分类信息";s:7:"version";s:5:"2.1.0";s:6:"is_com";s:1:"1";s:8:"show_nav";s:1:"1";s:7:"summary";s:48:"分类信息模块，适用于招聘、租房等";s:9:"developer";s:36:"嘉兴想天信息科技有限公司";s:7:"website";s:21:"http://www.ourstu.com";s:5:"entry";s:15:"Cat/index/index";s:8:"is_setup";s:1:"0";s:4:"sort";s:1:"0";s:4:"icon";s:13:"align-justify";s:13:"can_uninstall";s:1:"1";s:11:"admin_entry";s:14:"Admin/Cat/info";}
+?>

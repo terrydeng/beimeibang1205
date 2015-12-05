@@ -1,0 +1,82 @@
+<php>
+    $store_child_li_num=modC('STORE_CHILD_LI_NUM',5,'Store');
+    //获取到目录树使用的目录
+    if($tab == 'home')
+    $cats = M('Store/Category')->getMenuTree(1);
+    else  $cats = M('Store/Category')->getMenuTree(0);
+</php>
+<div class="all-sort-list">
+    <script>
+        $(function () {
+            $('[data-role=store_menu_top]').mouseenter(
+                    function () {
+
+                    })
+        })
+    </script>
+    <volist name="cats" id="vo">
+        <php>if($i == 1) $class='bo';</php>
+        <div class="item {$class}" data="{$vo.id}" data-role="store_menu_top">
+            <h3><span>·</span><a
+                    href="{:U('store/Index/li',array('name'=>'good','type'=>$vo['id']))}">{$vo.title}</a>
+            </h3>
+
+            <div id="menu_sub_{$vo.id}" count="{:count($vo['children'])}" class="item-list clearfix" style="min-height: 50px;">
+                <div class="subitem">
+                    <volist name="vo['children']" id="cd" key="k">
+                        <php>if(($k%$store_child_li_num)==1){</php>
+                            <div style="float: left;margin-left: 5px;">
+                        <php>}</php>
+                                <li style="text-align: center;width: 100px;"><a href="{:U('store/Index/li',array('name'=>'good','type'=>$cd['id']))}" style="color: #A9CAF0;font-weight: normal;">{$cd.title}</a></li>
+                        <php>if(($k%$store_child_li_num)==0||$k==count($vo['children'])){</php>
+                            </div>
+                        <php>}</php>
+                    </volist>
+                </div>
+            </div>
+        </div>
+
+    </volist>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var store_child_li_num="{$store_child_li_num}";
+        $('.all-sort-list > .item').hover(function () {
+            var h = $('.all-sort-list').offset().top,						//获取当前下拉菜单距离窗口多少像素
+                    s = $(window).scrollTop(),									//获取游览器滚动了多少高度
+                    i = $(this).offset().top,									//当前元素滑过距离窗口多少像素
+                    item = $(this).children('.item-list').height(),				//下拉菜单子类内容容器的高度
+                    sort = $('.all-sort-list').height(),						//父类分类列表容器的高度
+                    count=$(this).children('.item-list').attr('count'),
+                    width=0;
+            if(count%store_child_li_num){
+                width=(parseInt(count/store_child_li_num)+1)*106+20;
+            }else{
+                width=parseInt(count/store_child_li_num)*106+20;
+            }
+            $(this).children('.item-list').css('width',width+'px');
+            if (item < sort) {
+                $(this).children('.item-list').css('top', (i - h)-1);//如果子类的高度小于父类的高度
+            } else {
+                if (s > h) {												//判断子类的显示位置，如果滚动的高度大于所有分类列表容器的高度
+                    if (i - s > 0) {											//则 继续判断当前滑过容器的位置 是否有一半超出窗口一半在窗口内显示的Bug,
+                        $(this).children('.item-list').css('top', (s - h) );
+                    } else {
+                        $(this).children('.item-list').css('top', (s - h) - (-(i - s)));
+                    }
+                } else {
+                    var id = $(this).attr('data');
+                    $(this).children('.item-list').css('top', $(this).position().top)
+                    //  $(this).children('.item-list').css('top', 3);
+                }
+            }
+
+            $(this).addClass('hover');
+            $(this).children('.item-list').css('display', 'block');
+        }, function () {
+            $(this).removeClass('hover');
+            $(this).children('.item-list').css('display', 'none');
+        });
+    });
+</script>

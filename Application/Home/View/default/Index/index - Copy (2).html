@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <include file="Public/head"/>
+    <link href="__CSS__/home.css" type="text/css" rel="stylesheet">
+	<link href="__ASSAN__/css/homestyle.css" type="text/css" rel="stylesheet">
+	<link href="__ASSAN__/bxslider/jquery.bxslider.css" type="text/css" rel="stylesheet">
+
+	<script>
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			window.location.replace('http://www.beimeibang.com/index.php?s=/mob/member/index.html')
+		}
+	</script>
+    <php> M('Member')->need_login();</php>
+</head>
+
+<body>
+<include file="Public/header"/>
+<!-- 头部 -->
+<style>
+    .container{
+        width:1140px;max-width: 1140px
+    }
+</style>
+<!-- 头部 
+<include file="Index/_nav"/>
+-->
+<script>
+	function adjust_navbar() {
+        $('#main-container').css('padding-top',$('#nav_bar').height() - 39);
+		$('.slider-Section')
+    }
+</script>
+
+<!--
+	<div class="sliderSection">
+		<ul class="bxslider">
+		  <li><img src="__ASSAN__/img/bg-3.jpg" title="" /></li>
+		  <li><img src="__ASSAN__/img/bg-2.jpg" title="" /></li>
+		  <li><img src="__ASSAN__/img/bg-1.jpg" title="" /></li>
+		</ul>		
+	</div>
+-->
+<div id="main-container" class="top-bar ">    
+	<!--rev slider start-->
+	<div class="sliderSection">
+		<ul class="bxslider" style="display:none">
+		  <li><img class="slider-image" src="__ASSAN__/img/bg-3.jpg" title="" /></li>
+		  <li><img class="slider-image" src="__ASSAN__/img/bg-1.jpg" title="" /></li>
+		  <li><img class="slider-image" src="__ASSAN__/img/bg-4.jpg" title="" /></li>
+		</ul>		
+		<div class="application-section container">			
+			<div class="col-md-3">
+				<div class="application-form">
+					<div class="title">北美帮提供免费申请方案</div>
+					
+					<div class="selection-label">目标</div>
+					<div class="option selected first">游学</div>
+					<div class="option second">中小学</div>
+					<div class="option third">大学</div>					
+						
+					<div class="selection-label">目前就读年级</div>				
+					<input class="text-input current-grade" type="text" />
+					
+					<div class="selection-label">计划出国时间</div>
+					<input class="text-input planned-journey-start" type="text" />
+
+					<div class="form-submit">免费快速获得申请方案</div>
+				</div>
+			</div>
+			
+			<div class="col-md-6 col-md-offset-1">
+				<div class="application-tag-line">				
+					<div class="jumbo-heading">入读世界一流学校</div>
+					<div class="sub-tag">比想象中的便宜，容易。</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="notes-icons-section">
+		<div class="container">			
+			<div class="col-md-3 notes-icon">
+				<div class="row">
+					<img src="__ASSAN__/img/planetearth5.png" />
+				</div>
+				<div class="row">
+					<div class="icon-heading">夏令营、插班生</div>
+				</div>
+				<div class="row">
+					<div class="icon-sub-heading">优秀游学项目</div>
+				</div>			
+			</div>
+			<div class="col-md-3 notes-icon">
+				<div class="row">
+					<img src="__ASSAN__/img/highschool.png" />
+				</div>
+				<div class="row">
+					<div class="icon-heading">加拿大中小学</div>
+				</div>
+				<div class="row">
+					<div class="icon-sub-heading">西岸100强</div>
+				</div>	
+			</div>
+			<div class="col-md-3 notes-icon">
+				<div class="row">
+					<img src="__ASSAN__/img/monument26.png" />
+				</div>
+				<div class="row">
+					<div class="icon-heading">全球知名大学</div>
+				</div>
+				<div class="row">
+					<div class="icon-sub-heading">加拿大100强</div>
+				</div>	
+			</div>
+			<div class="col-md-3 notes-icon">
+				<div class="row">
+					<img src="__ASSAN__/img/studying.png" />
+				</div>
+				<div class="row">
+					<div class="icon-heading">特色专业学院</div>
+				</div>
+				<div class="row">
+					<div class="icon-sub-heading">BC省一百强</div>
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+	
+	<!--revolution end-->
+    <volist name="showBlocks" id="v">
+        <php>if($v=='slider'){</php>
+        <div class="container">
+        </div>
+
+
+        <php>}else{</php>
+        {:W($v.'/HomeBlock/render')}
+        <php>}</php>
+
+    </volist>
+</div>
+
+
+
+<!-- /头部 -->
+<!-- 主体 -->
+
+<!-- /主体 -->
+
+<load href="/Application/Home/Static/assan/bxslider/jquery.bxslider.min.js" />
+
+
+<!-- 底部 -->
+<include file="Public/footer"/>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256732958'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256732958%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+<!-- /底部 -->
+
+<script>
+	jQuery(document).ready(function(){
+      $('.bxslider').show().bxSlider({
+        preloadImages: 'all',
+		auto : true,
+		speed : 1000,
+		pause: 8000,
+		autoStart: true,
+		onSlideBefore : function($slideElement, oldIndex, newIndex){
+			if (newIndex == 1){
+				jQuery(".application-tag-line .jumbo-heading").text("重新定义海外求学");
+				jQuery(".application-tag-line .sub-tag").text("更聪明、更真实 、免费申请");
+				
+			} else if(newIndex == 2) {
+				jQuery(".application-tag-line .jumbo-heading").text("聚会北美最优教育资源");
+				jQuery(".application-tag-line .sub-tag").text("第一个全周期海外求学评估");
+			} else if (newIndex == 0) {
+				jQuery(".application-tag-line .jumbo-heading").text("入读世界一流学校");
+				jQuery(".application-tag-line .sub-tag").text("比想象中的便宜，容易。");			
+			}
+		}
+      });
+    });
+	
+</script>
+</body>
+</html>
