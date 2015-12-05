@@ -1,0 +1,124 @@
+.main-content{
+	margin-top: 170px;
+}
+
+h2 {
+	margin-top: 15px;
+}
+.school-header{
+	color: #000000;
+	margin-bottom: 20px;
+	width: 100%;
+	background: url(../images/bannermin.png);
+	background-size: cover;
+}
+
+.school-emblem {
+	width: 150px;
+	height: auto;
+}
+
+.school-intro .school-details{
+	padding-left: 30px;
+}
+
+.school-intro .school-details > div {
+	margin-top: 5px;
+}
+
+.row.school-information-section{
+	margin-top: 20px;
+}
+
+.school-world-rank-container, .school-country-rank-container{
+	display: block;
+	position: relative;
+	width: 83px;
+    height: 83px;
+}
+
+.school-intro .rank-bubble{
+	position: relative;
+	box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 83px;
+    text-align: center;
+    text-decoration: none;
+    width: 83px;
+    background: rgba(48, 53, 61, 0.8) none repeat scroll 0% 0%;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 50% 50% 50% 50%;
+    font: normal normal normal normal 14px / 22.4px 'Helvetica Neue', Helvetica, Arial, STXihei, 华文细黑, 'Microsoft YaHei', 微软雅黑, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 45px 0px 0px;
+}
+
+.school-intro .rank-number{
+	box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    height: 33px;
+    text-align: center;
+    width: 83px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 30px / 33px 'Helvetica Neue', Helvetica, Arial, STXihei, 华文细黑, 'Microsoft YaHei', 微软雅黑, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    position: absolute;
+	padding: 10px 0px 0px;
+    z-index: 10;
+}
+
+.school-post{
+	
+}
+
+.school-post img{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.school-post .school-core-stats{
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.school-post .school-core-stats-title{
+	margin-left: 25px;
+	margin: 20px 0px 10px 25px;
+}
+
+.school-post table {
+	width: 100%;
+	border-bottom: transparent;
+}
+
+.school-post .post-content{
+	padding-left: 10px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+td.item-label-cell{
+	width: 35%;
+}
+
+#school-detail-tabs {
+	margin-top: 20px;
+}
+
+.school-post .tab-content{
+	background-color: white;
+	overflow: hidden;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	padding-bottom: 20px;
+}
+
+.school-post .social-section{
+	margin-top: 20px;
+}

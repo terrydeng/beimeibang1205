@@ -1,0 +1,24 @@
+[ 2015-11-15T09:38:30+08:00 ] 66.249.79.166 /t114/index.php?s=/Home/Article/detail/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012349s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012911s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0108s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 't114.o1t1_doc0s1_a1' doesn't exist
+
+[ 2015-11-15T11:37:00+08:00 ] 66.249.79.159 /t114/index.php?s=/Home/Article/detail/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002843s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008988s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0023s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 't114.o1t1_doc0s1_a1' doesn't exist
+

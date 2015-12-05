@@ -1,0 +1,12 @@
+[ 2015-11-18T12:48:46+08:00 ] 66.249.79.173 /t114/index.php?s=/Home/Article/detail/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0028s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 't114.o1t1_doc0s1_a1' doesn't exist
+

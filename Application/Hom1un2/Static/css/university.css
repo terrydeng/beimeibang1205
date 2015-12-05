@@ -1,0 +1,131 @@
+table.university_list{
+    border-spacing: none;
+    border-collapse: separate;
+	margin-top: 20px;
+    width: 100%;
+	
+}
+
+table.university_list ,
+div.school-categories{
+	margin-top: 160px;
+	font-size: 16px;
+    letter-spacing: 1px;
+}
+
+
+div.school-categories li.active{
+	background-color: #0088cc;
+}
+div.school-categories li.active a{
+	color: white;
+}
+
+div.school-categories li a{
+	font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,Helvetica;
+}
+
+table.university_list td{
+	background-color: white;
+}
+
+table.university_list td {
+}
+table.university_list tr:first-child>td {
+    border-top: none;
+}
+
+table.university_list td.rank,
+table.university_list td.logo,
+table.university_list td.name-link {
+    text-align: center;
+}
+
+table.university_list th{
+    border-top: none;
+    border-bottom: 1px solid red;
+    text-align: center;
+    font-size: 15px;
+    color: #5a5a5a;
+}
+
+table.university_list .marked-stat{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ededed;
+}
+table.university_list .marked-stat.first{
+    color: rgb(109, 185, 255);
+}
+table.university_list .marked-stat.second{
+    color: rgb(77, 222, 196);
+}
+table.university_list .marked-stat.third{
+    color: rgb(255, 198, 25);
+}
+
+table.university_list .name-link,
+table.university_list .school-intro,
+table.university_list .rank{
+    border-bottom: 1px solid #ededed;
+}
+
+table.university_list .name-link{
+    vertical-align: middle;
+}
+
+table.university_list .school-intro{
+    height: 65px;
+    
+}
+
+img.school-logo {    
+   margin-top: 20px;
+   width: 80px;
+   height: auto;
+}
+
+table.university_list .school-ranking-number {
+	border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 35px;
+    min-width: 35px;
+    text-align: center;
+    width: 35px;
+    perspective-origin: 17.5px 17.5px;
+    transform-origin: 17.5px 17.5px;
+    background: rgb(255, 97, 44) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 5px 5px 5px 5px;
+    font: normal normal normal normal 24px / 35px 'Helvetica Neue', Helvetica, Arial, STXihei, 华文细黑, 'Microsoft YaHei', 微软雅黑, sans-serif;
+    margin: 20px 0px 0px;
+    outline: rgb(255, 255, 255) none 0px;
+	margin-left: 10px;
+	vertical-align: center;	
+}
+
+table.university_list  th.univ-col-1 {
+	min-width: 80px;
+}
+table.university_list  th.univ-col-2 {
+	min-width: 150px;
+	width: 30%;
+}
+
+.school-categories > li > a {
+  display: block;
+  width: 190px \9;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+
+.school-categories .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}

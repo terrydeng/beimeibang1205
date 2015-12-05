@@ -1,0 +1,89 @@
+[ 2015-11-09T10:26:41+08:00 ] 52.33.42.32 /t114/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010604s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+
+[ 2015-11-09T10:26:42+08:00 ] 52.33.42.32 /t114/admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002293s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `o1t1_config` [ RunTime:0.0028s ]
+SQL: SELECT `type`,`name`,`value` FROM `o1t1_config` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000706s ]
+
+[ 2015-11-09T10:26:42+08:00 ] 52.33.42.32 /t114/admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012461s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000742s ]
+
+[ 2015-11-09T10:26:47+08:00 ] 52.33.42.32 /t114/admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002105s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+NOTIC: [8] Undefined index: lite C:\o260c115m1107AC\t114\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `o1t1_member` [ RunTime:0.0018s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `o1t1_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `o1t1_action` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `o1t1_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0127s ]
+SQL: SHOW COLUMNS FROM `o1t1_action_log` [ RunTime:0.0019s ]
+SQL: INSERT INTO `o1t1_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','874588704','member','1','1447036007','admin在2015-11-09 10:26登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `o1t1_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 C:\o260c115m1107AC\t114\Application\Common\Common\function.php 第 713 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\o260c115m1107AC\t114\Application\Common\Common\function.php 第 713 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `o1t1_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1446949607 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `o1t1_member` SET `login`=`login`+1,`last_login_time`='1447036007',`last_login_ip`='874588704' WHERE `uid` = 1 [ RunTime:0.0002s ]
+
+[ 2015-11-09T10:26:47+08:00 ] 52.33.42.32 /t114/admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002478s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002117s ]
+SQL: SHOW COLUMNS FROM `o1t1_menu` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`title`,`url` FROM `o1t1_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0155s ]
+SQL: SELECT `pid` FROM `o1t1_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `o1t1_addons` [ RunTime:0.0021s ]
+SQL: SELECT `config` FROM `o1t1_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `o1t1_member` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `o1t1_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `o1t1_action_log` [ RunTime:0.0113s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `o1t1_action_log` LIMIT 1   [ RunTime:0.0015s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 't114.o1t1_document' doesn't exist
+
