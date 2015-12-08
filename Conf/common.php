@@ -43,8 +43,10 @@ return array(
 'DB_TYPE'   => 'mysqli', // 数据库类型
 'DB_HOST'   => '127.0.0.1', // 服务器地址
 'DB_NAME'   => 'o6c1111', //'o6c1110', //'o260c118c', //'o260c118b', //'o260c117a', //'o260c116a', //'o260c115m2qbk', //'o260c115m', //'o260c1105', // 数据库名
-'DB_USER'   => 'rootbmb',//'root', // 用户名
-'DB_PWD'    => 'aw3456',  // 密码
+
+'DB_USER'   => 'root', // 用户名
+'DB_PWD'    => 'aw3',  // 密码
+
 'DB_PORT'   => '3306', // 端口
 'DB_PREFIX' => 'o2c0_', // 数据库表前缀
 

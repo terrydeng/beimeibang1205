@@ -23,7 +23,9 @@
 	<div class="container featured-school-info">
 		<div class="row">
 			<div class="col-md-12">
+
 				<div class="section-title">学校资源精选</div>
+
 			</div>
 		</div>
 		<div class="row">
@@ -132,47 +134,7 @@
 	<php></php>
     </div>
 	
-	<!-- -->
-	    <div class="issue_list">
-        <volist name="contents" id="vo">
-            <div class="item_inner">
-                <div class="item_core">
-                    <div class="item_type">a1{$vo.issue.title}b2</div>
-                    <a href="{:U('Issue/Index/issueContentDetail',array('id'=>$vo['id']))}">
-                        <if condition="$display_type eq 'masonry'">
-                            <img class="cover" src="{$vo.cover_id|getThumbImageById=255}" height="{$vo.cover_height|default=253}"/>
-                            <else/>
-                            <img class="cover" src="{$vo.cover_id|getThumbImageById=255,200}" style="height:200px;"/>
-                        </if>
-                    </a>
 
-                    <div><h3><a href="{:U('Issue/Index/issueContentDetail',array('id'=>$vo['id']))}" class="text-more"
-                                style="width: 100%">{$vo.title}</a></h3></div>
-                    <div class="spliter"></div>
-                    <div>
-                        <ul class="operation clearfix">
-                            <li><i class="icon-eye-open"></i>{$vo.view_count}</li>
-                            <li>
-                                {:Hook('support',array('table'=>'issue_content','row'=>$vo['id'],'app'=>'Issue','uid'=>$vo['uid'],'jump'=>'issue/index/issuecontentdetail'))}
-                            </li>
-                            <li><i class="icon-comments-alt"></i>{$vo.reply_count}</li>
-                        </ul>
-                    </div>
-                    <div class="spliter"></div>
-                    <div><a class="author" href="{$vo.user.space_url}">
-                        <img src="{$vo.user.avatar128}"
-                             ucard="{$vo.uid}" class="avatar-img">{$vo.user.nickname}
-                    </a>
-
-                        <div class="pull-right ctime">{$vo.create_time|friendlyDate}</div>
-                    </div>
-                </div>
-            </div>
-    </volist>
-    </div>
-	
-	
-	
 	
         <if condition="count($contents) eq 0">
             <div style="font-size:3em;padding:2em 0;color: #ccc;text-align: center">此分类下暂无内容哦。O(∩_∩)O~</div>

@@ -17,5 +17,5 @@ define('UC_API_TYPE', 'Model'); //可选值 Model / Service
 define('UC_AUTH_KEY', '4TAsqbNDfP3yBwvQUhtKVngdG6ocZWu1ECieSxJI'); //加密KEY
 //define('UC_DB_DSN', 'mysqli://root:aw3@127.0.0.1:3306/o260c1105'); // 数据库连接，使用Model方式调用API必须配置此项
 //define('UC_DB_DSN', 'mysqli://root:aw3@127.0.0.1:3306/o260c117a'); //o260c116a');  ///o260c115m'); //o260c115m2qbk'); 数据库连接，使用Model方式调用API必须配置此项
-define('UC_DB_DSN', 'mysqli://rootbmb:aw3456@127.0.0.1:3306/o6c1111'); //o6c1110'); //o260c118c'); //o260c118b'); //o260c116a');  ///o260c115m'); //o260c115m2qbk'); 数据库连接，使用Model方式调用API必须配置此项
+define('UC_DB_DSN', 'mysqli://root:aw3@127.0.0.1:3306/o6c1111'); //o6c1110'); //o260c118c'); //o260c118b'); //o260c116a');  ///o260c115m'); //o260c115m2qbk'); 数据库连接，使用Model方式调用API必须配置此项
 define('UC_TABLE_PREFIX', 'o2c0_'); // 数据表前缀，使用Model方式调用API必须配置此项
